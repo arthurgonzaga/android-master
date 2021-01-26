@@ -99,7 +99,7 @@ class MainActivity : AppCompatActivity() {
 }
 ``` 
 
-* Ela é uma Subclasse do AppCompatActivity` _(essa SuperClasse é responsável pela compatibilidade entre as diferentes versões do android)_ 
+* Ela é uma Subclasse do `AppCompatActivity` _(essa SuperClasse é responsável pela compatibilidade entre as diferentes versões do android)_ 
 * Possui por default a função `onCreate()`, que irá ser executada ao inicar a Activity. 
 * Nessa função há um parametro `savedInstanceState` do tipo **Bundle** que permite restaurar o estado anterior de uma Activity ao recriar-la.
 * O `setContentView()` defini qual layout será mostrado para o usuário.

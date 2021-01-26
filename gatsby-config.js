@@ -3,15 +3,22 @@ module.exports = {
     title: `Android Master`,
     author: {
       name: `Arthur Gonzaga`,
-      summary: `who lives and works in Brazil building useful things.`,
+      summary: ``,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://arthurgonzaga.me/blog`,
+    description: `Um blog de tutoriais `,
+    siteUrl: `https://android-master.vercel.app/`,
     social: {
       linkedIn: `arthurgonzaga20`,
     },
   },
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/blog`,
+        name: `assets`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

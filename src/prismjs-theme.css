@@ -20,7 +20,7 @@
  pre[class*="language-"],
  code[class*="language-"] {
    color: #cfd6dd;
-   font-size: 1.06rem;
+   font-size: 1.16rem;
    font-weight: 570;
    text-shadow: none;
    font-family: 'Ubuntu Mono', monospace;
@@ -59,9 +59,9 @@
    background: #2a2b2b;
  }
  :not(pre) > code[class*="language-"] {
-   padding: .1em .3em;
-   border-radius: .3em;
-   color: #db4c69;
+   padding: .3em .3em;
+   border-radius: .2em;
+   color: #cfd6dd;
    background: #2a2b2b;
  }
  /*********************************************************
@@ -115,9 +115,6 @@
  .token.attr-value,
  .token.keyword {
    color: #cc7832;
- }
- .token.function {
-   color: #FFC66D;
  }
  .token.regex,
  .token.important,

@@ -8,10 +8,10 @@
   --maxWidth-lg: 32rem;
   --maxWidth-xl: 36rem;
   --maxWidth-2xl: 42rem;
-  --maxWidth-3xl: 48rem;
+  --maxWidth-3xl: 45rem;
   --maxWidth-4xl: 56rem;
   --maxWidth-full: "100%";
-  --maxWidth-wrapper: var(--maxWidth-2xl);
+  --maxWidth-wrapper: var(--maxWidth-3xl);
   --spacing-px: "1px";
   --spacing-0: 0;
   --spacing-1: 0.25rem;
@@ -47,13 +47,15 @@
   --lineHeight-relaxed: 1.625;
   /* 1.200 Minor Third Type Scale */
   --fontSize-0: 0.833rem;
-  --fontSize-1: 1rem;
+  --fontSize-01: 1rem;
+  --fontSize-1: 1.1rem;
   --fontSize-2: 1.2rem;
   --fontSize-3: 1.44rem;
   --fontSize-4: 1.5rem;
   --fontSize-5: 2.3rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
+  --fontSize-8: 3.2rem;
   --color-primary: #0f76ec;
   --color-secondary: #ff4949;
   --color-secondary-hover: #c90d0d;
@@ -121,28 +123,31 @@ h6 {
 
 h1 {
   font-weight: var(--fontWeight-black);
-  font-size: var(--fontSize-6);
+  font-size: var(--fontSize-7);
   color: var(--color-heading-black);
 }
 
 h2 {
-  font-size: var(--fontSize-5);
+  font-size: var(--fontSize-6);
 }
 
 h3 {
-  font-size: var(--fontSize-4);
+  font-size: var(--fontSize-5);
 }
 
 h4 {
-  font-size: var(--fontSize-3);
+  font-size: var(--fontSize-4);
 }
 
 h5 {
-  font-size: var(--fontSize-2);
+  font-size: var(--fontSize-3);
 }
 
 h6 {
   font-size: var(--fontSize-0);
+}
+.blog-post h6 {
+  font-size: var(--fontSize-1);
 }
 
 h1 > a {
@@ -204,7 +209,7 @@ blockquote {
   margin-right: var(--spacing-8);
   padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-6);
   border-left: var(--spacing-1) solid var(--color-primary);
-  font-size: var(--fontSize-2);
+  font-size: var(--fontSize-0);
   font-style: italic;
   margin-bottom: var(--spacing-8);
 }
@@ -257,8 +262,9 @@ a:focus {
 }
 
 .main-heading {
-  font-size: var(--fontSize-7);
+  font-size: var(--fontSize-8);
   margin: 0;
+  margin-top: var(--spacing-1);
 }
 
 .post-list-item {
@@ -295,6 +301,7 @@ a:focus {
 
 .bio p {
   margin-bottom: var(--spacing-0);
+  font-size: var(--fontSize-1);
 }
 
 .bio-avatar {
@@ -345,9 +352,12 @@ a:focus {
   color: var(--color-secondary);
 }
 
+.blog-post p{
+  text-align: justify;
+}
 
 .blog-post header p {
-  font-size: var(--fontSize-2);
+  font-size: var(--fontSize-3);
   font-family: var(--font-heading);
 }
 

@@ -3,7 +3,7 @@ module.exports = {
     title: `Android Master`,
     author: {
       name: `Arthur Gonzaga`,
-      summary: ``,
+      summary: `Android Developer.`,
     },
     description: `Um blog de tutoriais `,
     siteUrl: `https://android-master.vercel.app/`,
@@ -60,7 +60,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
+        name: `Android Master | Blog`,
         short_name: `GatsbyJS`,
         start_url: `/`,
         background_color: `#ffffff`,

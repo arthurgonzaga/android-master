@@ -14,7 +14,7 @@ const Categories = () => {
 
     console.log(categories)
     return (<div>
-        <h6 className="category-title">Categories</h6>
+        <h6 className="category-title">Categorias</h6>
         <ol className="categories" style={{ listStyle:"none" }}>
             {categories.map(category => {
                 var link = "#"+category

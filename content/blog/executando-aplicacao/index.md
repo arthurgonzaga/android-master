@@ -48,6 +48,7 @@ Na próxima janela poderemos escolher a versão Android do emulador. A Google re
 
 Após isso, abrirá a ultima janela de configuração do AVD, onde podemos selecionar coisas como: nome do emulador, camera, modo de Inicialização etc. Caso queira customizar o nome do AVD, mude no campo **AVD Name** e clique em **finish**.
 
+![AVD Name](avd-name.png)
 
 #### Executando a aplicação
 

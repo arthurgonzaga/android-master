@@ -10,13 +10,8 @@ var initialized = false
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  var posts
-  if(!initialized){
-    posts = data.allMarkdownRemark.nodes.reverse();
-    initialized = true
-  }else{
-    posts = data.allMarkdownRemark.nodes
-  }
+  const posts = data.allMarkdownRemark.nodes
+
   var category
 
   if (posts.length === 0) {
@@ -59,7 +54,6 @@ const BlogIndex = ({ data, location }) => {
                         <span itemProp="headline">{title}</span>
                       </Link>
                     </h2>
-                    <small>{post.frontmatter.date}</small>
                   </header>
                   <section>
                     <p
@@ -88,7 +82,6 @@ const BlogIndex = ({ data, location }) => {
                         <span itemProp="headline">{title}</span>
                       </Link>
                     </h2>
-                    <small>{post.frontmatter.date}</small>
                   </header>
                   <section>
                     <p
@@ -116,7 +109,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___category], order: ASC }) {
+    allMarkdownRemark(sort: { fields: [frontmatter___category, frontmatter___date], order: ASC }) {
       nodes {
         excerpt
         fields {
@@ -126,6 +119,7 @@ export const pageQuery = graphql`
           title
           description
           category
+          date
         }
       }
     }

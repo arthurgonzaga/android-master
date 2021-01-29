@@ -1,6 +1,6 @@
 ---
 title: Conceitos básicos
-date: "2021-01-25"
+date: "25-01-2021"
 description: Iniciando um novo projeto e entendendo sua estrutura
 category: Android
 ---

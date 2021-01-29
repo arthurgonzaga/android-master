@@ -1,6 +1,6 @@
 ---
 title: Executando a aplicação
-date: "2021-01-28"
+date: "28-01-2021"
 description: Configurando o AVD e rodando o aplicativo.
 category: Android
 ---

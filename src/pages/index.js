@@ -6,9 +6,17 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Categories from "../components/categories"
 
+var initialized = false
+
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
+  var posts
+  if(!initialized){
+    posts = data.allMarkdownRemark.nodes.reverse();
+    initialized = true
+  }else{
+    posts = data.allMarkdownRemark.nodes
+  }
   var category
 
   if (posts.length === 0) {
@@ -108,7 +116,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___category], order: DESC }) {
+    allMarkdownRemark(sort: { fields: [frontmatter___category], order: ASC }) {
       nodes {
         excerpt
         fields {

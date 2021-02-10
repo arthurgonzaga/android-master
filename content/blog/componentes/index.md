@@ -53,4 +53,7 @@ Caso tenha visto o post anterior, pudemos observar que ele é um texto estático
 ## EditText
 
 ## Button
+
+## findViewById
+## ViewBinding
 ![](../../assets/em-construção.png)

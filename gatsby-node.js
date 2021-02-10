@@ -12,13 +12,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     `
       {
         allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: ASC }
+          sort: { fields: [frontmatter___id], order: ASC }
           limit: 1000
         ) {
           nodes {
-            id
             fields {
               slug
+            }
+            frontmatter {
+              id
             }
           }
         }
@@ -42,14 +44,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   if (posts.length > 0) {
     posts.forEach((post, index) => {
-      const previousPostId = index === 0 ? null : posts[index - 1].id
-      const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
+      const previousPostId = index === 0 ? null : posts[index - 1].frontmatter.id
+      const nextPostId = index === posts.length - 1 ? null : posts[index + 1].frontmatter.id
 
       createPage({
         path: post.fields.slug,
         component: blogPost,
         context: {
-          id: post.id,
+          id: post.frontmatter.id,
           previousPostId,
           nextPostId,
         },
@@ -107,6 +109,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       description: String
       date: Date @dateformat
       category: String
+      id: Int
     }
 
     type Fields {

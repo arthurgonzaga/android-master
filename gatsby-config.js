@@ -61,10 +61,10 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Android Master | Blog`,
-        short_name: `GatsbyJS`,
+        short_name: `Android Master`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#ff4949`,
         display: `minimal-ui`,
         icon: `content/assets/gatsby-icon.png`,
       },

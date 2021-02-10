@@ -71,17 +71,16 @@ export default BlogPostTemplate
 
 export const pageQuery = graphql`
   query BlogPostBySlug(
-    $id: String!
-    $previousPostId: String
-    $nextPostId: String
+    $id: Int!
+    $previousPostId: Int
+    $nextPostId: Int
   ) {
     site {
       siteMetadata {
         title
       }
     }
-    markdownRemark(id: { eq: $id }) {
-      id
+    markdownRemark(frontmatter: {id: {eq: $id}}) {
       excerpt(pruneLength: 160)
       html
       frontmatter {
@@ -89,9 +88,10 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
         category
+        id
       }
     }
-    previous: markdownRemark(id: { eq: $previousPostId }) {
+    previous: markdownRemark(frontmatter: {id: { eq: $previousPostId }}) {
       fields {
         slug
       }
@@ -99,7 +99,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    next: markdownRemark(id: { eq: $nextPostId }) {
+    next: markdownRemark(frontmatter: {id: { eq: $nextPostId }}) {
       fields {
         slug
       }

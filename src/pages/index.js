@@ -120,6 +120,7 @@ export const pageQuery = graphql`
           description
           category
           date
+          id
         }
       }
     }

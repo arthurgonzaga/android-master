@@ -2,7 +2,7 @@
 title: Componentes
 date: "06-02-2021"
 id: 3
-description: Entendendo suas funcionalidades e como os conectar com a Activity
+description: Entendendo suas funcionalidades
 category: Android
 ---
 

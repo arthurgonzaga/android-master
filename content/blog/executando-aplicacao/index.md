@@ -63,6 +63,7 @@ Finalmente seu primeiro _"Hello World!"_ no android!
 
 ![Aplicativo no emulador](running.png)
 
+---
 # Exercício
 
 Mude o texto do `TextView` para _"Olá Mundo!"_ e execute a aplicação novamente.

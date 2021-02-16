@@ -58,14 +58,7 @@ const Bio = ({location}) => {
           <strong>{author.name}</strong>
           <br/>
           <small>{author?.summary || null}</small>
-          <br/> 
-
-          <small>
-            <Link to="/" itemProp="url">
-              <span itemProp="home">Tutoriais</span>
-            </Link>
-          </small>
-          &nbsp;&nbsp;&nbsp;&nbsp;
+          <br/>
           <small>
             <Link to="/about-me/" >
               <span itemProp="bio">Sobre mim</span>
@@ -76,12 +69,6 @@ const Bio = ({location}) => {
             <Link to="/contact-me/" >
               <span itemProp="bio">Contato</span>
             </Link>
-          </small>
-          &nbsp;&nbsp;&nbsp;&nbsp;
-          <small>
-            <a href={`https://www.linkedin.com/in/${social?.linkedIn || ``}`}>
-              LinkedIn
-            </a>
           </small>
         </p>
       )}

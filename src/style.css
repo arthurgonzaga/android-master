@@ -301,11 +301,10 @@ a:focus {
   margin-bottom: var(--spacing-8);
 }
 
-.bio .social-media{
-  position: absolute; right: 0;
-}
 .bio .SocialButtonsContainer{
-  position: absolute; right: 0;
+  position: absolute; 
+  right: 0;
+  margin-top: 25px;
 }
 
 .bio p {
@@ -392,11 +391,12 @@ a:focus {
   }
 }
 
-@media (max-width: 438px){
+@media (max-width: 440px){
   .bio .SocialButtonsContainer{
     text-align: end;
     width: 10px !important; 
     right: 10%;
+    margin-top: 0;
   }
   .bio p {
     margin-top: 13px;

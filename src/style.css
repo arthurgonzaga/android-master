@@ -391,7 +391,7 @@ a:focus {
   }
 }
 
-@media (max-width: 440px){
+@media (max-width: 469px){
   .bio .SocialButtonsContainer{
     text-align: end;
     width: 10px !important; 

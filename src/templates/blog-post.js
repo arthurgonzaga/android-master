@@ -50,7 +50,10 @@ const BlogPostTemplate = ({ data, location }) => {
                 )}
               </li>
               <li>
-                {next && (
+                {next 
+                && next.frontmatter.title !== "Arthur Gonzaga" 
+                && next.frontmatter.title === 1
+                &&(
                   <Link to={next.fields.slug} rel="next">
                     {next.frontmatter.title} →
                   </Link>

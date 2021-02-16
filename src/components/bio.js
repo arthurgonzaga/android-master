@@ -6,10 +6,10 @@
  */
 
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 
-const Bio = () => {
+const Bio = ({location}) => {
   const data = useStaticQuery(graphql`
     query BioQuery {
       avatar: file(absolutePath: { regex: "../../content/assets/pic.png/" }) {
@@ -56,10 +56,29 @@ const Bio = () => {
           <strong>{author.name}</strong>
           <br/>
           <small>{author?.summary || null}</small>
-          {` `} 
+          <br/> 
+
+          <small>
+            <Link to="/" itemProp="url">
+              <span itemProp="home">Tutoriais</span>
+            </Link>
+          </small>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <small>
+            <Link to="/about-me/" >
+              <span itemProp="bio">Sobre mim</span>
+            </Link>
+          </small>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <small>
+            <Link to="/contact-me/" >
+              <span itemProp="bio">Contato</span>
+            </Link>
+          </small>
+          &nbsp;&nbsp;&nbsp;&nbsp;
           <small>
             <a href={`https://www.linkedin.com/in/${social?.linkedIn || ``}`}>
-              Me siga no LinkedIn
+              LinkedIn
             </a>
           </small>
         </p>

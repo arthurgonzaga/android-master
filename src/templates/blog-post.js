@@ -43,7 +43,7 @@ const BlogPostTemplate = ({ data, location }) => {
               }}
             >
               <li>
-                {previous && (
+                {previous && previous.frontmatter.title !== "Arthur Gonzaga" && (
                   <Link to={previous.fields.slug} rel="prev">
                     ← {previous.frontmatter.title}
                   </Link>

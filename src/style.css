@@ -308,6 +308,7 @@ a:focus {
 .bio-avatar {
   margin-right: var(--spacing-6);
   margin-bottom: var(--spacing-0);
+  margin-top: 15px;
   min-width: 50px;
   border-radius: 100%;
 }

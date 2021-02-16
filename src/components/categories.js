@@ -10,7 +10,7 @@ const Categories = () => {
         }
       }
   `)
-    const categories = data.allMarkdownRemark.distinct.sort().reverse()
+    const categories = data.allMarkdownRemark.distinct.sort()
 
     console.log(categories)
     return (<div>
@@ -18,6 +18,8 @@ const Categories = () => {
         <ol className="categories" style={{ listStyle:"none" }}>
             {categories.map(category => {
                 var link = "#"+category
+                if(category === "Sobre mim") return 
+                if(category === "Contato") return 
                 return (
                     <Link to={link} itemProp="url">
                         <li>

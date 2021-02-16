@@ -29,12 +29,18 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
-      <Bio />
+      <Bio location={location} />
       <Categories/>
       <ol style={{ listStyle: `none` }}>
         {
         posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
+          const id = post.frontmatter.id + ". "|| ""
+          console.log(id)
+
+          if(post.frontmatter.category === "Sobre mim") return 
+          if(post.frontmatter.category === "Contato") return 
+
 
           //category = get category from previous <li>
 
@@ -51,7 +57,7 @@ const BlogIndex = ({ data, location }) => {
                   <header>
                     <h2>
                       <Link to={post.fields.slug} itemProp="url">
-                        <span itemProp="headline">{title}</span>
+                        <span itemProp="headline">{id}{title}</span>
                       </Link>
                     </h2>
                   </header>
@@ -79,7 +85,7 @@ const BlogIndex = ({ data, location }) => {
                   <header>
                     <h2>
                       <Link to={post.fields.slug} itemProp="url">
-                        <span itemProp="headline">{title}</span>
+                        <span itemProp="headline">{id}{title}</span>
                       </Link>
                     </h2>
                   </header>

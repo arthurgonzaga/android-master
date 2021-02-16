@@ -25,9 +25,10 @@
     "gatsby-transformer-remark": "^2.10.0",
     "gatsby-transformer-sharp": "^2.6.0",
     "prismjs": "^1.22.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
+    "react": "16.8.1",
+    "react-dom": "16.8.1",
     "react-helmet": "^5.2.1",
+    "react-social-media-buttons": "^1.0.8",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.75"
   },

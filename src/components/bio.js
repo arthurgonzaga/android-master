@@ -9,6 +9,8 @@ import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 
+import SocialMediaButtons  from 'react-social-media-buttons';
+
 const Bio = ({location}) => {
   const data = useStaticQuery(graphql`
     query BioQuery {
@@ -83,6 +85,13 @@ const Bio = ({location}) => {
           </small>
         </p>
       )}
+      <SocialMediaButtons className="social-media"
+        style={{position: 'absolute', right: '0'}}
+        links={['https://www.linkedin.com/in/arthurgonzaga20/','https://github.com/arthurgonzaga','mailto:arthurgonzagaxyz@gmail.com']}
+        buttonStyle={{width: '32px', height: '32px', margin: '0px 14px', backgroundColor: 'transparent', margin: '0px 28px 0 -8px'}}
+        iconStyle={{color: '#7c7c7c'}}
+        openNewTab={true}
+      />
     </div>
   )
 }

@@ -3,7 +3,7 @@ module.exports = {
     title: `Android Master`,
     author: {
       name: `Arthur Gonzaga`,
-      summary: `Android Developer.`,
+      summary: `Android Developer`,
     },
     description: `Um blog de tutoriais `,
     siteUrl: `https://android-master.vercel.app/`,

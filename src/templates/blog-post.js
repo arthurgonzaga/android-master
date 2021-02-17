@@ -52,7 +52,7 @@ const BlogPostTemplate = ({ data, location }) => {
               <li>
                 {next 
                 && next.frontmatter.title !== "Arthur Gonzaga" 
-                && next.frontmatter.title === 1
+                && next.frontmatter.title !== "Conceitos básicos" 
                 &&(
                   <Link to={next.fields.slug} rel="next">
                     {next.frontmatter.title} →

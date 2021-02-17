@@ -64,6 +64,6 @@ Finalmente seu primeiro _"Hello World!"_ no android!
 ![Aplicativo no emulador](running.png)
 
 ---
-# Exercício
+# Exercício <a style="font-size: 1rem;position: absolute;display: inline-block; margin-top: 20px;margin-left: 20px;opacity: 0.3;" title="Resposta" href="../arquivo-de-recursos/#resposta">🔗</a>
 
 Mude o texto do `TextView` para _"Olá Mundo!"_ e execute a aplicação novamente.

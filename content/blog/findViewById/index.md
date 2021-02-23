@@ -119,5 +119,5 @@ Clique no botão e o texto será alterado, como na imagem a seguir:
 
 ![](after_click_result.png)
 
-Nesse post, aprendemos como usar o findViewById e como executar linhas de códigos ao clicaar em um botão. No próximo post, vamos entender por que o **ViewBinding** substitúi o findViewById e por que é mais seguro.
+Nesse post, aprendemos como usar o findViewById e como executar linhas de códigos ao clicar em um botão. No próximo post, vamos entender porque o **ViewBinding** substitúi o findViewById e porque ele é mais seguro.
 

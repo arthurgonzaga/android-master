@@ -32,5 +32,6 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 - [ ] 40 posts
 ## 🎓 Comece a aprender hoje!
 
-Então, o que você está esperando? Cada dia é único, então faça-o valer a pena! Clique [aqui](https://android-master.com.br/) e comece agora mesmo.
+Então, o que você está esperando? Cada dia é único, então faça-o valer a pena!  
+Clique [aqui](https://android-master.com.br/) e comece agora mesmo.
 

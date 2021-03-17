@@ -132,4 +132,4 @@ binding.btnEditar.text = "EDITAR TEXTO"
   height: 150px;
   object-fit: cover;" src="sunglasses.gif"/>
 
-Neste post vimos como e porque usar o ViewBinding e entendemos suas vantagens. O uso do ViewBinding é super recomendado, logo, vamos estar usando-o na maioria dos nossos projetos futuros. No próximo post vamos estar desenvolmendo um aplicativo usando os conceitos aplicados até o momento.
+Neste post vimos como e porque usar o ViewBinding e entendemos também as suas vantagens. O uso do ViewBinding é super recomendado, logo, vamos estar usando-o na maioria dos nossos projetos futuros. No próximo post vamos estar desenvolmendo um aplicativo usando os conceitos aplicados até o momento. 

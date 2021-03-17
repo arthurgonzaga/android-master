@@ -22,7 +22,6 @@ Aqui você aprenderá desde os conceitos mais básicos até os mais avançados n
 
 ## 😀 Quais são as minhas metas?
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
 - [x] Adquirir um domínio
 - [x] 5 posts
 - [ ] Criar um canal no YouTube

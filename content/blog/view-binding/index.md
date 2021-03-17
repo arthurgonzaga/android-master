@@ -6,7 +6,7 @@ description: O que é, e por que usar-lo ao invés do findViewById?
 category: Android
 ---
 
-No post anterior, usamos a função _findViewById()_ para "achar" às views no arquivo XML. No entanto, quando o aplicativo tem views  mais complexas, o _findViewById()_ torna o aplicativo mais lento, porque o Android procura a sua View entre a hierarquia das Views em tempo de execução.Mas, felizmente, existe uma maneira melhor.
+No post anterior, usamos a função [_findViewById()_](https://android-master.com.br/findViewById/) para "achar" às views no arquivo XML. No entanto, quando o aplicativo tem views  mais complexas, o _findViewById()_ torna o aplicativo mais lento, porque o Android procura a sua View entre a hierarquia das Views em tempo de execução. Mas, felizmente, existe uma maneira melhor.
 
 ## Introdução
 
@@ -23,7 +23,9 @@ binding.btnMudar
 ```
 > O binding é uma variável que vincula o que está na UI à sua Activity,
 
-Como é gerado uma Classe para todos os arquivos de layout e seu nome é o mesmo que o do layout + Binding
+É gerado uma Classe para todos os arquivos de layout, e o nome dessa classe segue o padrão:  
+<br>
+**NomeDoLayout+Binding**
 
 ###### Exemplo:
     Arquivos de Layout: 
@@ -39,7 +41,7 @@ Como é gerado uma Classe para todos os arquivos de layout e seu nome é o mesmo
 
 Antes de tudo, adicione o `buildFeatures` ao build.gradle (Module):
 
-```kotlin
+```
 android{
     ...
     buildFeatures{
@@ -67,7 +69,7 @@ override fun onCreate(savedInstanceState: Bundle) {
     // Inicializa a binding passando o layoutInflater como parâmetro
     binding = ActivityMainBinding.inflate(layoutInflater)
 
-    // Definindo a View que será apresentada nesta Activity
+    // Definindo a View que será apresentada nessa Activity
     val view = binding.root
     setContentView(view)
 }
@@ -84,9 +86,9 @@ binding.btnMudar.setOnClickListener {
 ```
 
 Nesse último exemplo, o código até ficou mais extenso do que usando findViewById(). Mas quando há muitos componentes, a diferença é clara.  
-**Veja este próximo exemplo:**
+**Veja esta próximo comparação:**
 
-###### findViewById
+##### Usando findViewById
 ```kotlin
 // Declarando TODOS os componentes
 val txtMessagem = findViewById(R.id.txtMessagem) as TextView
@@ -100,7 +102,7 @@ btnMudar.text = "MUDAR TEXTO"
 btnEditar.text = "EDITAR TEXTO"
 ```
 > Há a necessidade de "encontrar" todos os componentes para depois poder usa-los.
-###### viewBinding
+##### Usando ViewBinding
 ```kotlin
 // Declarando o binding
 val binding = ActivityMainBinding.inflate(layoutInflater)
@@ -113,7 +115,7 @@ binding.txtMessagem.text = "Hello World"
 binding.btnMudar.text = "MUDAR TEXTO"
 binding.btnEditar.text = "EDITAR TEXTO"
 ```
-> É muito mais fácil de usar os componentes com o binding pois precisamos declarar-lo apenas uma vez.
+> Observe que não precisamos declarar todos os componentes para depois poder usar, pois a classe gerada já realiza esse trabalho para a gente.
 ## Vantagens
 
 * O código é mais curto, mais fácil de ler e de manter do que o código que usa _findViewById()_.
@@ -125,5 +127,9 @@ binding.btnEditar.text = "EDITAR TEXTO"
 * Você obtém segurança de tipo para acessar visualizações. (Segurança de tipo significa que o compilador valida os tipos durante a compilação e gera um erro se você tentar atribuir o tipo errado a uma variável.)
 
 ## Conclusão
+
+<image style="width: 300px;
+  height: 150px;
+  object-fit: cover;" src="sunglasses.gif"/>
 
 Neste post vimos como e porque usar o ViewBinding e entendemos suas vantagens. O uso do ViewBinding é super recomendado, logo, vamos estar usando-o na maioria dos nossos projetos futuros. No próximo post vamos estar desenvolmendo um aplicativo usando os conceitos aplicados até o momento.

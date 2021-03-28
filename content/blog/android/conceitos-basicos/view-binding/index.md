@@ -3,7 +3,6 @@ title: ViewBinding
 date: "07-03-2021"
 id: 6
 description: O que é, e por que usar-lo ao invés do findViewById?
-category: Android
 ---
 
 No post anterior, usamos a função [_findViewById()_](https://android-master.com.br/findViewById/) para "achar" às views no arquivo XML. No entanto, quando o aplicativo tem views  mais complexas, o _findViewById()_ torna o aplicativo mais lento, porque o Android procura a sua View entre a hierarquia das Views em tempo de execução. Mas, felizmente, existe uma maneira melhor.

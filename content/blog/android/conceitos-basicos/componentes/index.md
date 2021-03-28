@@ -3,7 +3,6 @@ title: Componentes
 date: "06-02-2021"
 id: 3
 description: Entendendo suas funcionalidades
-category: Android
 ---
 
 Quando geramos um projeto no Android Studio, observamos que automaticamente é gerado um arquivo de layout com um `TextView`. Nesse post apresentarei alguns dos componentes do android, como o **_TextView_**, e suas funcionalidades essenciais.

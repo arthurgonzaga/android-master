@@ -57,17 +57,9 @@ const Bio = ({location}) => {
         <p>
           <strong>{author.name}</strong>
           <br/>
-          <small>{author?.summary || null}</small>
-          <br/>
           <small>
             <Link to="/about-me/" >
               <span itemProp="bio">Sobre mim</span>
-            </Link>
-          </small>
-          &nbsp;&nbsp;&nbsp;&nbsp;
-          <small>
-            <Link to="/contact-me/" >
-              <span itemProp="bio">Contato</span>
             </Link>
           </small>
         </p>
@@ -76,11 +68,20 @@ const Bio = ({location}) => {
         style={{position: 'absolute', right: '0'}}
         links={['https://www.linkedin.com/in/arthurgonzaga20/','https://github.com/arthurgonzaga','mailto:arthurgonzagaxyz@gmail.com']}
         buttonStyle={{width: '32px', height: '32px', margin: '0px 14px', backgroundColor: 'transparent', margin: '0px 28px 0 -8px'}}
-        iconStyle={{color: '#7c7c7c'}}
+        iconStyle={style}
         openNewTab={true}
       />
     </div>
   )
+}
+
+
+
+var style = {
+    color: '#7c7c7c', 
+    "&:hover": {
+      color: "#4385F4"
+  }
 }
 
 export default Bio

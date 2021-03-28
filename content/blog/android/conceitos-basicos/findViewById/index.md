@@ -3,7 +3,6 @@ title: FindViewById
 date: "20-02-2021"
 id: 5
 description: Conectando os componentes à Activity
-category: Android
 ---
 
 Desde o primeiro post, vinhemos trabalhando em um aplicativo estático (que não faz nada), e nesse post finalmente vamos tornar nosso aplicativo em um dinâmico! Para que isso seja possível temos que ligar a interface do usuário (UI) ao código kotlin. 

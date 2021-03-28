@@ -1,9 +1,8 @@
 ---
-title: Conceitos básicos
+title: Introdução
 date: "25-01-2021"
 id: 1
 description: Iniciando um novo projeto e entendendo sua estrutura
-category: Android
 ---
 
 Olá, seja bem-vindo ao **Android Master**!  

@@ -3,7 +3,6 @@ title: Executando a aplicação
 date: "28-01-2021"
 id: 2
 description: Configurando o AVD e rodando o aplicativo.
-category: Android
 ---
 
 Agora que você já entende um pouco da estrutura básica e criou seu primeiro projeto Android, vamos aprender como rodar-lo em um dispositivo. Há duas maneiras de realizar isso: usando um aparelho Android _ou_ um emulador. Vamos abordar os dois tópicos nesse post.

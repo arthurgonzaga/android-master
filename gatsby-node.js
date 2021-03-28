@@ -7,7 +7,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Define a template for blog post
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
 
-  // Get all markdown blog posts sorted by date
+  // Get all markdown blog posts sorted by ID
   const result = await graphql(
     `
       {
@@ -21,6 +21,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             }
             frontmatter {
               id
+              category
+              subcategory
             }
           }
         }
@@ -99,6 +101,8 @@ exports.createSchemaCustomization = ({ actions }) => {
       linkedIn: String
     }
 
+    type: 
+
     type MarkdownRemark implements Node {
       frontmatter: Frontmatter
       fields: Fields
@@ -109,7 +113,9 @@ exports.createSchemaCustomization = ({ actions }) => {
       description: String
       date: Date @dateformat
       category: String
-      id: Int
+      subcategory: String
+      id: Float
+      bio: String
     }
 
     type Fields {

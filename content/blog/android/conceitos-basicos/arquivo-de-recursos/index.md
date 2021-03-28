@@ -3,7 +3,6 @@ title: Arquivos de recursos
 date: "12-02-2021"
 id: 4
 description: Por que deve-se separar os arquivos de recursos do código?
-category: Android
 ---
 
 

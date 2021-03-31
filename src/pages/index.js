@@ -41,36 +41,35 @@ const BlogIndex = ({ data, location }) => {
         const categoryTitle = category.frontmatter.category
         
         return(
-          <div key={categoryTitle}>
+          <div key={categoryTitle} id="all-posts">
             <h2 id={categoryTitle}>{categoryTitle}</h2>
             {
               subcategories.map(subcategory =>{
                 const subcategoryTitle = subcategory.frontmatter.subcategory
                 const subcategorySize = subcategory.frontmatter.size - 1
                 
-                console.log(subcategoryTitle)
-                console.log(subcategorySize)
+                //console.log(subcategoryTitle)
+                //console.log(subcategorySize)
                 
                 var sum = index + subcategorySize
                 
                 return(
                   <div key={subcategoryTitle}>
-                  <h4 id={subcategoryTitle}>{subcategoryTitle}</h4>
-                  <ol>
-                      {
-                        posts.slice(index, sum).map(post =>{
-                          index++
-                          return(
-                            <li key={post.fields.slug}>
+                    <h4 id={subcategoryTitle}>{subcategory.frontmatter.index +". "+subcategoryTitle}</h4>
+                    <div>
+                        {
+                          posts.slice(index, sum).map(post =>{
+                            index++
+                            return(
                               <article
                                 className="post-list-item"
                                 itemScope
                                 itemType="http://schema.org/Article"
-                                >
+                                key={post.fields.slug}>
                                 <header>
                                   <h2>
                                     <Link onClick={index=0} to={post.fields.slug} itemProp="url">
-                                      <span itemProp="headline">{post.id}{post.frontmatter.title}</span>
+                                      <span itemProp="headline">{post.frontmatter.id + ". " + post.frontmatter.title}</span>
                                     </Link>
                                   </h2>
                                 </header>
@@ -83,11 +82,10 @@ const BlogIndex = ({ data, location }) => {
                                   />
                                 </section>
                               </article>
-                          </li>
-                          )
-                        })
-                      }
-                  </ol>
+                            )
+                          })
+                        }
+                    </div>
                   </div>
               )
               })
@@ -161,6 +159,7 @@ subcategories: allMarkdownRemark(
       frontmatter {
         subcategory
         size
+        index
       }
     }
   }

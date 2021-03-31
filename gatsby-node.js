@@ -114,6 +114,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       subcategory: String
       id: Int
       bio: String
+      index: Int
     }
 
     type Fields {

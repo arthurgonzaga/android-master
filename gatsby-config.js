@@ -64,7 +64,7 @@ module.exports = {
         short_name: `Android Master`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#F87171`,
+        theme_color: `#4ec78a`,
         display: `minimal-ui`,
         icon: `content/assets/android-master-icon.png`,
       },

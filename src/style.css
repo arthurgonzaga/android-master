@@ -372,7 +372,7 @@ g:hover{
 .categories li{
   margin-right: var(--spacing-3);
   border-radius: 0.2rem;
-  border: solid 2px var(--color-button);
+  background-color: var(--color-secondary);
 }
 
 
@@ -386,7 +386,7 @@ g:hover{
 }
 
 .categories h6{
-  color: var(--color-secondary);
+  color: var(--color-background);
   font-size: 0.75rem;
   font-weight: var(--fontWeight-bold);
   margin-top: 0;

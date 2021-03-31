@@ -324,7 +324,7 @@ a:focus {
 }
 
 .bio a{
-  margin-top: 3px;
+  margin-top: 2px;
   margin-left: 0;
   color: gray;
   position: absolute;
@@ -354,7 +354,6 @@ g:hover{
 
 .categories li{
   margin-right: var(--spacing-3);
-  padding: var(--spacing-2) var(--spacing-3);
   background-color: var(--color-button);
   border-radius: 0.2rem;
 }
@@ -373,6 +372,12 @@ g:hover{
   font-size: 0.75rem;
   font-weight: var(--fontWeight-bold);
   margin-top: 0;
+  padding: var(--spacing-2) var(--spacing-3);
+}
+
+
+.categories h6:hover{
+  color: var(--color-primary);
 }
 
 .blog-post header h1 {

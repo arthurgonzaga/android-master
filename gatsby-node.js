@@ -101,8 +101,6 @@ exports.createSchemaCustomization = ({ actions }) => {
       linkedIn: String
     }
 
-    type: 
-
     type MarkdownRemark implements Node {
       frontmatter: Frontmatter
       fields: Fields
@@ -114,7 +112,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       date: Date @dateformat
       category: String
       subcategory: String
-      id: Float
+      id: Int
       bio: String
     }
 

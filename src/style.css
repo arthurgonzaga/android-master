@@ -63,8 +63,9 @@
   --fontSize-8: 3.2rem;
   --color-primary: #4385F4;
   --color-secondary: #31DB86;
-  --color-button: #083043;
+  --color-button: #f1f1f1;
   --color-text: #2e353f;
+  --color-title: #78909c;
   --color-text-light: #4f5969;
   --color-heading: #083043;
   --color-heading-black: #083043;
@@ -277,24 +278,40 @@ a:focus {
   margin-top: var(--spacing-1);
 }
 
-.post-list-item {
-  margin-bottom: var(--spacing-8);
+#all-posts h4{
   margin-top: var(--spacing-8);
 }
 
+#all-posts h2{
+  color: var(--color-secondary);
+  margin-top: var(--spacing-8);
+}
+
+.post-list-item {
+  margin-bottom: var(--spacing-8);
+  margin-top: var(--spacing-8);
+  margin-left: var(--spacing-8);
+}
+
+
 .post-list-item p {
   margin-bottom: var(--spacing-0);
+  color: var(--color-text-light);
 }
 
 .post-list-item h2 {
-  font-size: var(--fontSize-4);
-  color: var(--color-primary);
+  font-size: var(--fontSize-1);
+  color: var(--color-title) !important;
   margin-bottom: var(--spacing-2);
   margin-top: var(--spacing-0);
 }
 
+.post-list-item h2:hover{
+  color: var(--color-primary) !important;
+}
+
 .post-list-item header {
-  margin-bottom: var(--spacing-4);
+  margin-bottom: var(--spacing-2);
 }
 
 .header-link-home {
@@ -354,9 +371,10 @@ g:hover{
 
 .categories li{
   margin-right: var(--spacing-3);
-  background-color: var(--color-button);
   border-radius: 0.2rem;
+  border: solid 2px var(--color-button);
 }
+
 
 .categories a{
   text-decoration: none;
@@ -376,9 +394,6 @@ g:hover{
 }
 
 
-.categories h6:hover{
-  color: var(--color-primary);
-}
 
 .blog-post header h1 {
   margin: var(--spacing-0) var(--spacing-0) var(--spacing-2) var(--spacing-0);

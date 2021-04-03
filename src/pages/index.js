@@ -8,6 +8,8 @@ import Categories from "../components/categories"
 
 var initialized = false
 var index = 0
+var topicIndex = 1;
+
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -15,7 +17,6 @@ const BlogIndex = ({ data, location }) => {
   const categories = data.categories.nodes
   const subcategories = data.subcategories.nodes
 
-  
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
@@ -27,6 +28,7 @@ const BlogIndex = ({ data, location }) => {
       </Layout>
     )
   }
+
   
   return (
     <Layout location={location} title={siteTitle}>
@@ -52,14 +54,15 @@ const BlogIndex = ({ data, location }) => {
                 //console.log(subcategorySize)
                 
                 var sum = index + subcategorySize
-                
+                topicIndex = 0
                 return(
                   <div key={subcategoryTitle}>
                     <h4 id={subcategoryTitle}>{subcategory.frontmatter.index +". "+subcategoryTitle}</h4>
-                    <div>
+                    <div id={"subcategory-"+subcategory.frontmatter.index}>
                         {
                           posts.slice(index, sum).map(post =>{
                             index++
+                            topicIndex++
                             return(
                               <article
                                 className="post-list-item"
@@ -69,7 +72,7 @@ const BlogIndex = ({ data, location }) => {
                                 <header>
                                   <h2>
                                     <Link onClick={index=0} to={post.fields.slug} itemProp="url">
-                                      <span itemProp="headline">{post.frontmatter.id + ". " + post.frontmatter.title}</span>
+                                      <span itemProp="headline">{topicIndex + ". " + post.frontmatter.title}</span>
                                     </Link>
                                   </h2>
                                 </header>

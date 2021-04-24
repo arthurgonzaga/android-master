@@ -115,6 +115,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       id: Int
       bio: String
       index: Int
+      project: Boolean
     }
 
     type Fields {

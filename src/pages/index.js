@@ -72,7 +72,7 @@ const BlogIndex = ({ data, location }) => {
                                 <header>
                                   <h2>
                                     <Link onClick={index=0} to={post.fields.slug} itemProp="url">
-                                      <span itemProp="headline">{topicIndex + ". " + post.frontmatter.title}{post.frontmatter.project != null ? "[ Projeto ]": ""}</span>
+                                      <span itemProp="headline">{topicIndex + ". " + post.frontmatter.title}{post.frontmatter.project != null ? " [ Projeto ]": ""}</span>
                                     </Link>
                                   </h2>
                                 </header>

@@ -106,7 +106,7 @@ Use o método `nextInt()` para gerar um número aleatório entre 0 e 5 e salve e
 Random.nextInt(0, 10) // Número aleatório entre 0 e 9
 ```
 
-**Obs:** Lembre-se que começamos a contar do 0 em programação, mesmo que gere um numero de 0 a 9, ainda temos 10 possibilidades de números
+**Obs:** Lembre-se que começamos a contar do 0 em programação, mesmo que gere um número entre 0 e 9, ainda temos 10 possibilidades de números
 
 
 #### Passo 7:
@@ -121,8 +121,22 @@ Use esse número aleatório para acessar o array de faces e salve em uma variáv
 
 #### Passo 8:
 
-Para finalizar, atualize a imagem do ImageView usando a imagem que você "pegou" no ultimo passo.
+Para finalizar, atualize a imagem do ImageView usando o método `setImageDrawable()` passando a imagem que você "pegou" no ultimo passo.
 
 ```kotlin
     binding.imgDice.setImageDrawable(imagem)
 ```
+
+## Prontinho!
+
+Agora rode a aplicação, clique no botão várias vezes e verá o dado mudando de face randomicamente. Parabéns, você finalizou o seu primeiro projeto!  
+
+
+> Se algo deu errado no projeto, veja a solução digitando o comando abaixo
+
+```
+git checkout solution
+```
+
+
+Finalmente finalizamos o primeiro capítulo do nosso blog! No próximo vamos aprofundar algúns conceitos vistos nesse capítulo e aprender sobre Jetpack Compose.
